@@ -5,7 +5,9 @@ import {
 
 
 //TODO Create the draw function
-function _drawTodos() {}
+function _drawTodos() {
+
+}
 
 export default class TodoController {
   constructor() {
@@ -23,6 +25,9 @@ export default class TodoController {
   addTodo(e) {
     e.preventDefault();
     var form = e.target;
+    let rawTodo = {
+      todo: form.todo.value
+    }
     //TODO build the todo object from the data that comes into this method
     var todo = {};
     try {
