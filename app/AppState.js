@@ -22,6 +22,9 @@ class AppState extends EventEmitter {
 
   /** @type {Quote} */
   quote = null
+
+  // /** @type {List[]} */
+  // list = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

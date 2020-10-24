@@ -26,11 +26,13 @@
             <div id="quote" class="col-6 offset-3 text-center">
             </div>
             <div id="todo" class="col-3">
-                <form class="col" onsubmit="app.todoController.addTodo(e)">
+                <form onsubmit="app.todoController.addTodo(e)">
                     <div class="form-group">
-                        <input type="text" name="todo" class="form-control" placeholder="Enter Todo">
-                        <button type="submit" name="" id="" class="btn btn-outline-light btn-sm btn-block">Add</button>
+                        <label for="todos">Todos</label>
+                        <input type="text" class="form-control" name="todo" id="todo" aria-describedby="emailHelp"
+                            placeholder="Enter Todo">
                     </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
