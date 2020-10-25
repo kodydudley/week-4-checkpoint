@@ -7,7 +7,7 @@ import {
 } from "../Services/AxiosService.js";
 
 
-let url = 'kody/todos/'
+let url = 'kody/todos'
 
 
 class TodoService {
@@ -15,7 +15,6 @@ class TodoService {
     console.log("Getting the Todo List");
     let res = await api.get(url);
     let results = res.data.data.map(rawData => new Todo(rawData));
-    ProxyState.todos = results
     console.log(results);
     //TODO Handle this response from the server
   }
@@ -23,7 +22,7 @@ class TodoService {
   async addTodo(todo) {
     let res = await api.post(url, todo);
     ProxyState.todos = [...ProxyState.todos, new Todo(todo)]
-    console.log(ProxyState.todos);
+    console.log(res);
     //TODO Handle this response from the server
   }
 

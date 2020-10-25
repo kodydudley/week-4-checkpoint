@@ -14,6 +14,7 @@ function _drawTodos() {
 
 export default class TodoController {
   constructor() {
+    todoService.getTodos()
     ProxyState.on("todos", _drawTodos)
     //TODO Remember to register your subscribers
     // todoService.getTodos();
@@ -30,7 +31,7 @@ export default class TodoController {
     e.preventDefault();
     let form = e.target;
     let rawTodo = {
-      todo: form.todo.value
+      description: form.description.value
     }
     todoService.addTodo(rawTodo)
     form.reset()
