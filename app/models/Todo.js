@@ -2,7 +2,7 @@ export default class Todo {
   constructor({
     data
   }) {
-    this.description = data.message,
+    this.description = data.description,
       this.id = data._id;
   }
 
