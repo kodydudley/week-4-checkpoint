@@ -7,8 +7,10 @@ import {
 //TODO Create the draw function
 function _drawTodos() {
   let template = ""
+  let numberOfTodos = ProxyState.todos.length
   ProxyState.todos.forEach(t => template += t.Template)
   document.getElementById("todo").innerHTML = template
+  document.getElementById("numberOfTodos").innerText = numberOfTodos.toString()
 }
 
 export default class TodoController {
@@ -32,13 +34,6 @@ export default class TodoController {
     }
     todoService.addTodo(rawTodo)
     form.reset()
-    //TODO build the todo object from the data that comes into this method
-    var todo = {};
-    try {
-      todoService.addTodo(todo);
-    } catch (error) {
-      console.error(error)
-    }
   }
 
   /**

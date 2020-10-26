@@ -25,17 +25,19 @@
         <div class="row align-items-end">
             <div id="quote" class="col-6 offset-3 text-center">
             </div>
-            <div class="col-3">
+            <div class="col-3  bg-dark text-light">
                 <form type="submit" onsubmit="app.todoController.addTodo(event)">
-                    <div id="todo" class="form-group">
+                    <div class="form-group">
                         <input type="text" class="form-control" name="description" id="description"
                             aria-describedby="emailHelp" placeholder="Enter Todo">
-                        <button onclick="submit" class="btn btn-primary">Submit</button>
+                        <button onclick="submit" class="btn btn-primary btn-block">Submit</button>
                     </div>
                 </form>
                 <div id="todos">
-                    <h5>Number of todos:</h5>
+                    <h5>Number of todos:<div id="numberOfTodos"></div>
+                    </h5>
                 </div>
+                <div id="todo"></div>
             </div>
         </div>
     </main>

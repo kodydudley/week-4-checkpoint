@@ -8,12 +8,12 @@ export default class Todo {
   get Template() {
     if (this.completed) {
       return /*html*/ `
-  <div class="row">
+  <div class="row bg-dark text-light">
     <div class="col-2">
       <button onclick="app.todoController.toggleTodoStatus('${this.id}')" class="btn btn-success"><i class="fas fa-check-square"></i></button>
     </div>
-    <div class="col-8 bg-dark text-light">
-      <h6 class="line-through text-center ">${this.description}</h6>
+    <div class="col-8">
+      <h6 class="strikeThrough text-center ">${this.description}</h6>
     </div>
     <div class="col-2">
       <button onclick="app.todoController.removeTodo('${this.id}')" class="btn btn-danger"><i class="fas fa-minus-circle"></i></button>
@@ -22,11 +22,11 @@ export default class Todo {
     `
     } else {
       return /*html*/ `
-  <div class="row">
+  <div class="row bg-dark text-light">
     <div class="col-2">
       <button onclick="app.todoController.toggleTodoStatus('${this.id}')" class="btn btn-success"><i class="fas fa-check-square"></i></button>
     </div>
-    <div class="col-8 bg-dark text-light">
+    <div class="col-8">
       <h6 class="text-center">${this.description}</h6>
     </div>
     <div class="col-2">

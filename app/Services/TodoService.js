@@ -14,7 +14,6 @@ class TodoService {
   async getTodos() {
     let res = await api.get(url);
     ProxyState.todos = res.data.data.map(rawData => new Todo(rawData));
-    console.log(ProxyState.todos);
     //TODO Handle this response from the server
   }
 
@@ -28,10 +27,6 @@ class TodoService {
   async toggleTodoStatus(todoId) {
     let todo = await ProxyState.todos.find(todo => todo.id == todoId);
     todo.completed = todo.completed ? false : true
-    //TODO Make sure that you found a todo,
-    //		and if you did find one
-    //		change its completed status to whatever it is not (ex: false => true or true => false)
-
     let res = await api.put(url + todoId, todo);
     this.getTodos()
   }

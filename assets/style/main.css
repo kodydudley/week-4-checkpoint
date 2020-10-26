@@ -6,6 +6,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+.strikeThrough {
+  text-decoration: line-through;
+}
 
 .bodyHeight {
   height: 65vh;
