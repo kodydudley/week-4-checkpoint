@@ -32,7 +32,6 @@ class TodoService {
     //		change its completed status to whatever it is not (ex: false => true or true => false)
 
     let res = await api.put(url + todoId, todo);
-    this.getTodos()
     //TODO how do you trigger this change
   }
 
