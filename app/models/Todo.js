@@ -8,7 +8,7 @@ export default class Todo {
   get Template() {
     if (this.completed) {
       return /*html*/ `
-  <div class="row bg-dark text-light">
+  <div class="row  mb-2 bg-dark text-light">
     <div class="col-2">
       <button onclick="app.todoController.toggleTodoStatus('${this.id}')" class="btn btn-success"><i class="fas fa-check-square"></i></button>
     </div>
@@ -22,7 +22,7 @@ export default class Todo {
     `
     } else {
       return /*html*/ `
-  <div class="row bg-dark text-light">
+  <div class="row mb-2 bg-dark text-light">
     <div class="col-2">
       <button onclick="app.todoController.toggleTodoStatus('${this.id}')" class="btn btn-success"><i class="fas fa-check-square"></i></button>
     </div>
