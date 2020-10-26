@@ -16,8 +16,6 @@ export default class TodoController {
   constructor() {
     todoService.getTodos()
     ProxyState.on("todos", _drawTodos)
-    //TODO Remember to register your subscribers
-    // todoService.getTodos();
   }
 
   getTodos() {
