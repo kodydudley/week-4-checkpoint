@@ -6,9 +6,8 @@ import {
 
 //TODO Create the draw function
 function _drawTodos() {
-  let todos = ProxyState.todos
   let template = ""
-  todos.forEach(t => template += t.Template)
+  ProxyState.todos.forEach(t => template += t.Template)
   document.getElementById("todo").innerHTML = template
 }
 
